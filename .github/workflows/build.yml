@@ -37,6 +37,15 @@ jobs:
         run: ./gradlew assembleDebug
         working-directory: ./frontend/NegoceHub/android
 
+      - name: Find generated APKs
+        run: find ./frontend/NegoceHub/android -type f -name "*.apk" -print
+
+      - name: Upload APK(s)
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-apk
+          path: ./frontend/NegoceHub/android/app/build/outputs/apk/**/*.apk
+
   build_ios:
     name: Build iOS
     runs-on: macos-latest
