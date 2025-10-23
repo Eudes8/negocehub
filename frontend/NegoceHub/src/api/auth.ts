@@ -1,0 +1,1 @@
+// This file is no longer used for authentication as Supabase client handles it directly.
