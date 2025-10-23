@@ -1,0 +1,158 @@
+Cahier des Charges - Application Mobile NÉGOCEHUB
+1. Introduction
+Ce document détaille les exigences fonctionnelles et non fonctionnelles pour le développement de l'application mobile NÉGOCEHUB, une marketplace digitale universelle. L'application vise à connecter vendeurs et acheteurs dans un environnement sécurisé, moderne et accessible, facilitant le commerce en ligne notamment en Côte d'Ivoire et au-delà.
+2. Objectifs du Projet
+Offrir une expérience utilisateur fluide et intuitive pour les acheteurs.
+Proposer des outils performants et simples pour les vendeurs (gestion de boutique, produits, commandes).
+Assurer la sécurité des transactions et des données.
+Devenir la plateforme de référence pour le commerce en ligne en Afrique.
+Implémenter le logo et l'identité visuelle de NÉGOCEHUB.
+3. Cible
+Acheteurs : Individus à la recherche de produits et services variés, souhaitant une expérience d'achat en ligne simple, sécurisée et avec des options de paiement locales.
+Vendeurs : Commerçants, entrepreneurs et entreprises (petites et grandes) souhaitant louer un espace virtuel pour exposer leurs produits ou services, avec des outils de gestion efficaces.
+4. Exigences Fonctionnelles (User Stories et Fonctionnalités)
+4.1. Authentification & Profil Utilisateur
+FE.1.1. Inscription/Connexion :
+L'utilisateur doit pouvoir s'inscrire avec une adresse e-mail et un mot de passe.
+L'utilisateur doit pouvoir se connecter avec une adresse e-mail et un mot de passe existants.
+L'utilisateur doit pouvoir se connecter/s'inscrire via des services tiers (Google, Facebook, Apple).
+L'utilisateur doit pouvoir réinitialiser son mot de passe en cas d'oubli.
+Maquette associée : Écran de Connexion/Inscription
+FE.1.2. Gestion du Profil (Acheteur) :
+L'utilisateur doit pouvoir visualiser et modifier ses informations personnelles (nom, email, téléphone).
+L'utilisateur doit pouvoir gérer ses adresses de livraison (ajouter, modifier, supprimer, définir par défaut).
+L'utilisateur doit pouvoir gérer ses modes de paiement enregistrés (ajouter carte bancaire, mobile money, supprimer).
+Maquette associée : Profil Utilisateur / Compte, Gestion des Adresses de Livraison
+FE.1.3. Devenir Vendeur :
+L'acheteur doit pouvoir initier un processus pour devenir vendeur depuis son profil.
+4.2. Navigation & Découverte (Côté Acheteur)
+FE.2.1. Écran d'Accueil :
+L'utilisateur doit voir une section de recherche intuitive.
+L'utilisateur doit voir des catégories populaires ou recommandées.
+L'utilisateur doit voir des offres du jour ou des produits mis en avant.
+L'utilisateur doit avoir une barre de navigation persistante (Accueil, Catégories, Panier, Profil).
+Maquette associée : Écran d'Accueil / Fil d'Actualité
+FE.2.2. Recherche et Filtres :
+L'utilisateur doit pouvoir rechercher des produits ou services par mots-clés.
+L'utilisateur doit pouvoir filtrer les résultats par catégorie, prix, taille, couleur, vendeur, etc.
+L'utilisateur doit voir les résultats de recherche s'afficher dynamiquement.
+Maquette associée : Écran de Recherche et Filtres
+FE.2.3. Catégories :
+L'utilisateur doit pouvoir parcourir les produits et services par catégories thématiques.
+Maquette associée : Page de Catégories
+FE.2.4. Détail Produit/Service :
+L'utilisateur doit voir des images multiples du produit/service (carrousel).
+L'utilisateur doit voir le nom, le prix et une description détaillée.
+L'utilisateur doit voir les options disponibles (couleur, taille, quantité).
+L'utilisateur doit voir la note moyenne et les avis des autres acheteurs.
+L'utilisateur doit pouvoir ajouter le produit au panier.
+L'utilisateur doit voir des produits similaires ou du même vendeur.
+Maquette associée : Page de Détail Produit/Service
+FE.2.5. Favoris / Liste de Souhaits :
+L'utilisateur doit pouvoir ajouter des produits à une liste de favoris.
+L'utilisateur doit pouvoir consulter sa liste de favoris.
+(Maquette à générer)
+4.3. Processus d'Achat
+FE.3.1. Panier d'Achat :
+L'utilisateur doit pouvoir visualiser les produits ajoutés à son panier.
+L'utilisateur doit pouvoir modifier la quantité d'un produit.
+L'utilisateur doit pouvoir supprimer un produit du panier.
+L'utilisateur doit voir le sous-total, les frais de livraison et le total.
+L'utilisateur doit pouvoir appliquer un code promo.
+Maquette associée : Panier d'Achat
+FE.3.2. Paiement :
+L'utilisateur doit pouvoir choisir parmi différentes méthodes de paiement (Mobile Money, Carte Bancaire).
+L'utilisateur doit voir un récapitulatif clair de la commande avant confirmation.
+L'utilisateur doit pouvoir confirmer la commande.
+Maquette associée : Processus de Paiement
+FE.3.3. Confirmation de Commande :
+L'utilisateur doit voir une confirmation visuelle du succès de sa commande.
+L'utilisateur doit voir le numéro de commande et un bref aperçu du suivi.
+Maquette associée : Écran de Confirmation de Commande
+FE.3.4. Suivi de Commande :
+L'utilisateur doit pouvoir suivre l'état de sa commande (confirmée, en préparation, en transit, livrée).
+L'utilisateur doit pouvoir noter le vendeur une fois la commande livrée.
+Maquette associée : Suivi de Commande
+FE.3.5. Historique des Commandes :
+L'utilisateur doit pouvoir consulter la liste de toutes ses commandes passées.
+L'utilisateur doit pouvoir voir les détails de chaque commande (produits, prix, vendeur, paiement).
+Maquette associée : Détail d'une Commande Passée
+4.4. Espace Vendeur
+FE.4.1. Tableau de Bord Vendeur :
+Le vendeur doit voir un aperçu de sa performance actuelle (ventes, commandes, produits actifs).
+Le vendeur doit voir la liste de ses produits avec leur statut (actif/inactif).
+Le vendeur doit pouvoir ajouter un nouveau produit.
+Maquette associée : Vendeur : Tableau de bord
+FE.4.2. Gestion des Produits :
+Le vendeur doit pouvoir ajouter un nouveau produit (images, nom, prix, catégorie, description, statut actif/inactif).
+Le vendeur doit pouvoir modifier les informations d'un produit existant.
+Le vendeur doit pouvoir gérer le stock de ses produits.
+Maquette associée : Vendeur : Ajout/Modification de Produit
+FE.4.3. Gestion des Commandes Reçues :
+Le vendeur doit pouvoir voir une liste de toutes les commandes reçues.
+Le vendeur doit pouvoir consulter les détails de chaque commande (produits, acheteur, adresse, paiement).
+Le vendeur doit pouvoir mettre à jour le statut de la commande (préparation, expédiée, livrée).
+(Maquette à générer)
+FE.4.4. Messagerie Vendeur-Acheteur :
+Le vendeur doit pouvoir communiquer avec les acheteurs concernant les commandes.
+(Maquette à générer)
+FE.4.5. Statistiques de Vente :
+Le vendeur doit pouvoir accéder à des statistiques détaillées sur ses ventes (par produit, par période, etc.).
+(Maquette à générer)
+FE.4.6. Gestion du Profil de la Boutique :
+Le vendeur doit pouvoir personnaliser le profil de sa boutique (nom, description, logo, horaires).
+(Maquette à générer)
+FE.4.7. Gestion des Offres/Promotions :
+Le vendeur doit pouvoir créer et gérer des offres spéciales ou des promotions pour ses produits.
+(Maquette à générer)
+4.5. Communication & Support
+FE.5.1. Messagerie :
+L'utilisateur (acheteur ou vendeur) doit pouvoir initier une conversation avec le support NÉGOCEHUB.
+(Maquette à générer)
+FE.5.2. Notifications :
+L'utilisateur doit recevoir des notifications push pour les événements importants (statut de commande, nouvelles offres, messages).
+L'utilisateur doit pouvoir gérer ses préférences de notification.
+(Maquette à générer)
+FE.5.3. Centre d'Aide / FAQ :
+L'utilisateur doit pouvoir accéder à une section d'aide avec des FAQ et des articles.
+(Maquette à générer)
+FE.5.4. Avis & Notes :
+L'acheteur doit pouvoir laisser un avis et une note pour les produits achetés et les vendeurs.
+Le vendeur doit pouvoir consulter les avis reçus.
+(Maquette à générer : Page de Rédaction d'Avis)
+4.6. Autres Fonctionnalités
+FE.6.1. Partage de Produit :
+L'utilisateur doit pouvoir partager un produit sur les réseaux sociaux ou via d'autres applications.
+(Maquette à générer)
+FE.6.2. Écran de Bienvenue / Onboarding :
+Les nouveaux utilisateurs doivent être guidés à travers les principales fonctionnalités de l'application.
+(Maquette à générer)
+FE.6.3. Paramètres de l'Application :
+L'utilisateur doit pouvoir choisir la langue de l'application.
+L'utilisateur doit pouvoir ajuster les paramètres de notification.
+(Maquette à générer)
+5. Exigences Non Fonctionnelles
+NF.1. Performance : L'application doit être rapide et réactive, avec des temps de chargement minimaux (< 3 secondes).
+NF.2. Sécurité : Toutes les transactions et données personnelles doivent être sécurisées (HTTPS, chiffrement des données sensibles). Respect du RGPD et des réglementations locales.
+NF.3. Fiabilité : L'application doit être stable, avec un taux de crash minimal.
+NF.4. Ergonomie/UX : L'interface doit être intuitive, facile à utiliser, et offrir une expérience utilisateur agréable.
+NF.5. Compatibilité : L'application doit être compatible avec les dernières versions des systèmes d'exploitation iOS et Android (dernières 3 versions majeures).
+NF.6. Scalabilité : L'architecture doit permettre une croissance rapide du nombre d'utilisateurs et de produits sans dégradation significative des performances.
+NF.7. Multilinguisme : L'application doit supporter plusieurs langues (français, anglais au minimum, avec possibilité d'ajouter d'autres langues africaines).
+NF.8. Accessibilité : L'application doit être conçue pour être utilisable par des personnes ayant divers handicaps (ex: contrastes de couleurs, tailles de police ajustables, descriptions d'images).
+NF.9. Maintenance : Le code doit être propre, bien documenté et facile à maintenir/faire évoluer.
+6. Technologies Préconisées (Exemples)
+Front-end (Mobile) : React Native, Flutter, Swift (iOS), Kotlin (Android)
+Back-end : Node.js, Python (Django/Flask), PHP (Laravel), Java (Spring Boot)
+Base de Données : PostgreSQL, MongoDB, MySQL
+Paiement : Intégration d'APIs de Mobile Money (Wave, MTN Mobile Money, Moov Money) et de prestataires de cartes bancaires (Stripe, CinetPay, etc.)
+Cloud : AWS, Google Cloud Platform, Azure
+7. Livrables
+Documents de conception (Wireframes, Mockups, Spécifications fonctionnelles).
+Code source de l'application mobile (iOS et Android).
+APIs documentées.
+Tests unitaires et d'intégration.
+Documentation technique.
+Support post-lancement (selon accord).
+8. Calendrier & Budget
+À définir ultérieurement avec les parties prenantes.

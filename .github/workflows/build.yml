@@ -1,0 +1,62 @@
+name: Build React Native App
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build_android:
+    name: Build Android
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Install npm dependencies
+        run: npm install
+        working-directory: ./frontend/NegoceHub
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+        working-directory: ./frontend/NegoceHub/android
+
+      - name: Build Android App
+        run: ./gradlew assembleDebug
+        working-directory: ./frontend/NegoceHub/android
+
+  build_ios:
+    name: Build iOS
+    runs-on: macos-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Install npm dependencies
+        run: npm install
+        working-directory: ./frontend/NegoceHub
+
+      - name: Install CocoaPods
+        run: pod install
+        working-directory: ./frontend/NegoceHub/ios
+
+      - name: Build iOS App
+        run: xcodebuild build -workspace NegoceHub.xcworkspace -scheme NegoceHub -sdk iphonesimulator
+        working-directory: ./frontend/NegoceHub/ios
